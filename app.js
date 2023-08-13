@@ -9,9 +9,12 @@ function storeFormData(e){
       email: form.email.value,
       password: form.password.value,
   };
-  e.preventDefault();
-  users.push(user);
-  console.log(user);
+  if(user.email === '****' && user.password === '****'){
+    console.log(user);
+  } else{
+    users.push(user);
+  }
+  
 }
 
 // Event Listener
